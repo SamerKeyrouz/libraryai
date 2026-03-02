@@ -113,7 +113,7 @@ public class SecurityConfig {
                         String email = emailObj.toString().toLowerCase();
 
                         // ADMIN EMAIL
-                        if (email.equals("samer.key@hotmail.com")) {
+                        if (email.equals("samer.key@hotmail.com") || email.equals("marielyneroustom@gmail.com") ) {
                             mappedAuthorities.add(
                                     new SimpleGrantedAuthority("ROLE_ADMIN")
                             );
@@ -136,7 +136,10 @@ public class SecurityConfig {
                 new org.springframework.web.cors.CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                java.util.List.of("http://localhost:4200")
+                java.util.List.of(
+                        "http://localhost:4200",
+                        "https://libraryai.onrender.com"
+                )
         );
 
         configuration.setAllowedMethods(
