@@ -113,7 +113,7 @@ public class SecurityConfig {
                         String email = emailObj.toString().toLowerCase();
 
                         // ADMIN EMAIL
-                        if (email.equals("samer.key@hotmail.com") || email.equals("marielyneroustom@gmail.com") ) {
+                        if (email.equals("samer.key@hotmail.com") || email.equals("charles.saroufim@aspiresoftware.com") ) {
                             mappedAuthorities.add(
                                     new SimpleGrantedAuthority("ROLE_ADMIN")
                             );
