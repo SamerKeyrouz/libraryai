@@ -34,7 +34,7 @@ public class SecurityConfig {
                                 "/",
                                 "/index.html",
                                 "/**/*.js",
-                                "/**/.css",
+                                "/**/*.css",
                                 "/assets/**",
                                 "/favicon.ico"
                         ).permitAll()
@@ -70,7 +70,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/api/books/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/books/**").hasRole("ADMIN")
 
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
 
                 .oauth2Login(oauth -> oauth
